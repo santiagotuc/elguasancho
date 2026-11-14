@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Guasancho | Artículos en Cuero Legítimo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              leather: {
+                50: "#fbf7f4",
+                100: "#f4ece4",
+                300: "#d7bc9e",
+                600: "#8c5830",
+                800: "#4a2e1b",
+                900: "#2b1810",
+              },
+              gold: {
+                DEFAULT: "#c5a059",
+                dark: "#997531",
+              },
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', "serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-leather-50 text-leather-900 font-sans antialiased selection:bg-gold selection:text-white"
+  >
+    <!-- BARRA SUPERIOR DE ANUNCIOS -->
+    <div
+      class="bg-leather-900 text-leather-100 text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wider border-b border-leather-800"
+    >
+      <span
+        >🐎 100% Cuero Legítimo &bull; Envíos a todo San Miguel de Tucumán y el
+        país &bull; Pedidos al WhatsApp
+        <strong class="text-gold">+54 9 3816 78-6726</strong></span
+      >
+    </div>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header
+      class="sticky top-0 z-50 bg-leather-900/95 backdrop-blur-md border-b border-leather-800 shadow-lg"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <!-- Logo y Marca -->
+        <a href="#" class="flex items-center gap-3 group">
+          <img
+            src="img/logo.jpeg"
+            alt="El Guasancho Logo"
+            class="w-12 h-12 rounded-full object-cover border-2 border-gold shadow-md group-hover:scale-105 transition-transform"
+          />
+          <div>
+            <span
+              class="font-serif text-xl sm:text-2xl font-bold tracking-wide text-leather-100 block leading-none"
+              >EL GUASANCHO</span
+            >
+            <span
+              class="text-[10px] tracking-widest text-gold uppercase font-semibold"
+              >Artículos en Cuero</span
+            >
+          </div>
+        </a>
+
+        <!-- Navegación Desktop -->
+        <nav
+          class="hidden md:flex items-center gap-8 font-medium text-sm text-leather-100"
+        >
+          <a href="#inicio" class="hover:text-gold transition-colors">Inicio</a>
+          <a href="#productos" class="hover:text-gold transition-colors"
+            >Catálogo</a
+          >
+          <a href="#nosotros" class="hover:text-gold transition-colors"
+            >Nuestra Pasión</a
+          >
+          <a href="#contacto" class="hover:text-gold transition-colors"
+            >Contacto</a
+          >
+        </nav>
+
+        <!-- CTA WhatsApp Navbar -->
+        <div class="flex items-center gap-4">
+          <a
+            href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20consultar%20sobre%20los%20artículos%20en%20cuero%20de%20El%20Guasancho"
+            target="_blank"
+            class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-full font-semibold text-sm shadow-md transition-all hover:shadow-lg"
+          >
+            <i class="ph ph-whatsapp-logo text-lg"></i>
+            <span>CONTACTANOS</span>
+          </a>
+          <!-- Mobile menu button -->
+          <button
+            id="menu-btn"
+            class="md:hidden text-leather-100 text-2xl focus:outline-none"
+          >
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menú Móvil Desplegable -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-leather-900 border-t border-leather-800 px-4 pt-4 pb-6 space-y-3"
+      >
+        <a
+          href="#inicio"
+          class="block text-leather-100 hover:text-gold font-medium py-1"
+          >Inicio</a
+        >
+        <a
+          href="#productos"
+          class="block text-leather-100 hover:text-gold font-medium py-1"
+          >Catálogo</a
+        >
+        <a
+          href="#nosotros"
+          class="block text-leather-100 hover:text-gold font-medium py-1"
+          >Nuestra Pasión</a
+        >
+        <a
+          href="#contacto"
+          class="block text-leather-100 hover:text-gold font-medium py-1"
+          >Contacto</a
+        >
+        <a
+          href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20consultar%20sobre%20los%20artículos%20en%20cuero%20de%20El%20Guasancho"
+          target="_blank"
+          class="flex items-center justify-center gap-2 bg-emerald-600 text-white w-full py-2.5 rounded-xl font-semibold mt-2"
+        >
+          <i class="ph ph-whatsapp-logo text-lg"></i> CONTACTANOS
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      id="inicio"
+      class="relative bg-leather-900 text-leather-100 py-24 sm:py-32 overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 opacity-30 mix-blend-overlay bg-cover bg-center"
+        style="background-image: url(&quot;img/logo.jpeg&quot;)"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-leather-900 via-leather-900/90 to-transparent"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <span
+            class="inline-block bg-gold/20 text-gold border border-gold/40 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
+            >Talabartería y Artesanía Tradicional</span
+          >
+          <h1
+            class="font-serif text-4xl sm:text-6xl font-bold tracking-tight mb-6 leading-tight"
+          >
+            El Arte del Cuero Legítimo en Cada Detalle
+          </h1>
+          <p
+            class="text-leather-300 text-lg sm:text-xl mb-8 leading-relaxed font-light"
+          >
+            Piezas únicas hechas a mano por
+            <strong class="text-leather-100 font-semibold">Marcelo Rios</strong
+            >. Calidad indiscutible, durabilidad de por vida y la auténtica
+            tradición del norte argentino en San Miguel de Tucumán.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#productos"
+              class="bg-gold hover:bg-gold-dark text-leather-900 font-bold px-8 py-4 rounded-xl text-center shadow-lg transition-all hover:scale-105"
+            >
+              Ver Catálogo Destacado
+            </a>
+            <a
+              href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20hacerte%20un%20pedido%20personalizado."
+              target="_blank"
+              class="border-2 border-leather-300/40 hover:border-gold text-leather-100 font-semibold px-8 py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2"
+            >
+              <i class="ph ph-chat-circle-text text-xl"></i> Consultar con
+              Marcelo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS PRINCIPALES -->
+    <section class="py-12 bg-leather-100 border-b border-leather-300/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div
+            class="bg-leather-50 p-6 rounded-2xl shadow-sm border border-leather-300/20 hover:border-gold transition-all"
+          >
+            <i class="ph ph-shield-check text-3xl text-gold mb-2 block"></i>
+            <h3 class="font-bold text-leather-900">100% Cuero Vacuno</h3>
+            <p class="text-xs text-leather-600 mt-1">Selección premium</p>
+          </div>
+          <div
+            class="bg-leather-50 p-6 rounded-2xl shadow-sm border border-leather-300/20 hover:border-gold transition-all"
+          >
+            <i class="ph ph-certificate text-3xl text-gold mb-2 block"></i>
+            <h3 class="font-bold text-leather-900">Hecho a Mano</h3>
+            <p class="text-xs text-leather-600 mt-1">Costuras reforzadas</p>
+          </div>
+          <div
+            class="bg-leather-50 p-6 rounded-2xl shadow-sm border border-leather-300/20 hover:border-gold transition-all"
+          >
+            <i class="ph ph-truck text-3xl text-gold mb-2 block"></i>
+            <h3 class="font-bold text-leather-900">Envíos Seguros</h3>
+            <p class="text-xs text-leather-600 mt-1">Tucumán y todo el país</p>
+          </div>
+          <div
+            class="bg-leather-50 p-6 rounded-2xl shadow-sm border border-leather-300/20 hover:border-gold transition-all"
+          >
+            <i
+              class="ph ph-whatsapp-logo text-3xl text-emerald-600 mb-2 block"
+            ></i>
+            <h3 class="font-bold text-leather-900">Atención Directa</h3>
+            <p class="text-xs text-leather-600 mt-1">Venta por WhatsApp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <section
+      id="productos"
+      class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    >
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span
+          class="text-gold font-semibold uppercase tracking-widest text-sm block mb-2"
+          >Excelencia Artesanal</span
+        >
+        <h2
+          class="font-serif text-3xl sm:text-5xl font-bold text-leather-900 mb-4"
+        >
+          Catálogo Exclusivo
+        </h2>
+        <p class="text-leather-600 text-base sm:text-lg">
+          Cada pieza de El Guasancho refleja oficio, dedicación y el carácter
+          inconfundible del auténtico cuero legítimo.
+        </p>
+      </div>
+
+      <!-- Grid de Productos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Producto 1: Billetera y Llavero -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden border border-leather-300/30 group hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+        >
+          <div>
+            <div class="relative overflow-hidden aspect-square bg-leather-100">
+              <img
+                src="img/billetera.jpeg"
+                alt="Billetera y Llavero de Cuero"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-3 left-3 bg-leather-900 text-leather-100 text-xs font-bold px-3 py-1 rounded-full"
+                >Destacado</span
+              >
+            </div>
+            <div class="p-5">
+              <span
+                class="text-xs font-semibold text-gold uppercase tracking-wider block mb-1"
+                >Marroquinería</span
+              >
+              <h3 class="font-serif text-lg font-bold text-leather-900 mb-2">
+                Billetera Minimalista + Llavero
+              </h3>
+              <p class="text-leather-600 text-xs line-clamp-2 mb-4">
+                Confeccionada artesanalmente en cuero legítimo con costuras
+                reforzadas en hilo encerado azul. Alta durabilidad.
+              </p>
+            </div>
+          </div>
+          <div
+            class="p-5 pt-0 flex items-center justify-between border-t border-leather-100 mt-auto"
+          >
+            <div>
+              <span class="text-[10px] text-leather-600 uppercase block"
+                >Precio Especial</span
+              >
+              <span class="font-serif text-xl font-bold text-leather-900"
+                >$30.000 ARS</span
+              >
+            </div>
+            <a
+              href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20comprar%20la%20Billetera%20Minimalista%20+%20Llavero%20a%20$30.000"
+              target="_blank"
+              class="bg-leather-900 hover:bg-gold text-white hover:text-leather-900 p-3 rounded-xl transition-colors shadow-sm"
+            >
+              <i class="ph ph-whatsapp-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Producto 2: Estuche / Portagafas -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden border border-leather-300/30 group hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+        >
+          <div>
+            <div class="relative overflow-hidden aspect-square bg-leather-100">
+              <img
+                src="img/especial.jpeg"
+                alt="Estuche de Cuero para Anteojos"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-3 left-3 bg-leather-900 text-leather-100 text-xs font-bold px-3 py-1 rounded-full"
+                >Artesanal</span
+              >
+            </div>
+            <div class="p-5">
+              <span
+                class="text-xs font-semibold text-gold uppercase tracking-wider block mb-1"
+                >Accesorios</span
+              >
+              <h3 class="font-serif text-lg font-bold text-leather-900 mb-2">
+                Estuche / Portagafas Rústico
+              </h3>
+              <p class="text-leather-600 text-xs line-clamp-2 mb-4">
+                Protección elegante en cuero vacuno con botón metálico de alta
+                resistencia. Ideal para llevar con estilo.
+              </p>
+            </div>
+          </div>
+          <div
+            class="p-5 pt-0 flex items-center justify-between border-t border-leather-100 mt-auto"
+          >
+            <div>
+              <span class="text-[10px] text-leather-600 uppercase block"
+                >Precio Especial</span
+              >
+              <span class="font-serif text-xl font-bold text-leather-900"
+                >$30.000 ARS</span
+              >
+            </div>
+            <a
+              href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20comprar%20el%20Estuche%20/%20Portagafas%20Rústico%20a%20$30.000"
+              target="_blank"
+              class="bg-leather-900 hover:bg-gold text-white hover:text-leather-900 p-3 rounded-xl transition-colors shadow-sm"
+            >
+              <i class="ph ph-whatsapp-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Producto 3: Cinto con apliques ecuestres -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden border border-leather-300/30 group hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+        >
+          <div>
+            <div class="relative overflow-hidden aspect-square bg-leather-100">
+              <img
+                src="img/especial2.jpeg"
+                alt="Cinto con Apliques Ecuestres"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-3 left-3 bg-leather-900 text-leather-100 text-xs font-bold px-3 py-1 rounded-full"
+                >Talabartería</span
+              >
+            </div>
+            <div class="p-5">
+              <span
+                class="text-xs font-semibold text-gold uppercase tracking-wider block mb-1"
+                >Cintos</span
+              >
+              <h3 class="font-serif text-lg font-bold text-leather-900 mb-2">
+                Cinto con Apliques de Bronce
+              </h3>
+              <p class="text-leather-600 text-xs line-clamp-2 mb-4">
+                Cinto de cuero legítimo adornado con apliques ecuestres y
+                monedas de bronce trabajadas artesanalmente.
+              </p>
+            </div>
+          </div>
+          <div
+            class="p-5 pt-0 flex items-center justify-between border-t border-leather-100 mt-auto"
+          >
+            <div>
+              <span class="text-[10px] text-leather-600 uppercase block"
+                >Precio Especial</span
+              >
+              <span class="font-serif text-xl font-bold text-leather-900"
+                >$30.000 ARS</span
+              >
+            </div>
+            <a
+              href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20comprar%20el%20Cinto%20con%20Apliques%20de%20Bronce%20a%20$30.000"
+              target="_blank"
+              class="bg-leather-900 hover:bg-gold text-white hover:text-leather-900 p-3 rounded-xl transition-colors shadow-sm"
+            >
+              <i class="ph ph-whatsapp-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Producto 4: Cintos Clásicos Argentina -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden border border-leather-300/30 group hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+        >
+          <div>
+            <div class="relative overflow-hidden aspect-square bg-leather-100">
+              <img
+                src="img/cintos.png"
+                alt="Cintos de Cuero Argentina"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-3 left-3 bg-leather-900 text-leather-100 text-xs font-bold px-3 py-1 rounded-full"
+                >Clásico</span
+              >
+            </div>
+            <div class="p-5">
+              <span
+                class="text-xs font-semibold text-gold uppercase tracking-wider block mb-1"
+                >Cintos</span
+              >
+              <h3 class="font-serif text-lg font-bold text-leather-900 mb-2">
+                Cinto Clásico "Argentina"
+              </h3>
+              <p class="text-leather-600 text-xs line-clamp-2 mb-4">
+                Hebilla metálica reforzada y pasador con insignia grabada.
+                Disponible en tonos negro, marrón oscuro y habano.
+              </p>
+            </div>
+          </div>
+          <div
+            class="p-5 pt-0 flex items-center justify-between border-t border-leather-100 mt-auto"
+          >
+            <div>
+              <span class="text-[10px] text-leather-600 uppercase block"
+                >Precio Especial</span
+              >
+              <span class="font-serif text-xl font-bold text-leather-900"
+                >$30.000 ARS</span
+              >
+            </div>
+            <a
+              href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20comprar%20el%20Cinto%20Clásico%20Argentina%20a%20$30.000"
+              target="_blank"
+              class="bg-leather-900 hover:bg-gold text-white hover:text-leather-900 p-3 rounded-xl transition-colors shadow-sm"
+            >
+              <i class="ph ph-whatsapp-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Producto 5: Cintos Rústicos / Trenzados -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden border border-leather-300/30 group hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+        >
+          <div>
+            <div class="relative overflow-hidden aspect-square bg-leather-100">
+              <img
+                src="img/cintos2.png"
+                alt="Cintos Rústicos El Guasancho"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-3 left-3 bg-leather-900 text-leather-100 text-xs font-bold px-3 py-1 rounded-full"
+                >Tradición</span
+              >
+            </div>
+            <div class="p-5">
+              <span
+                class="text-xs font-semibold text-gold uppercase tracking-wider block mb-1"
+                >Cintos</span
+              >
+              <h3 class="font-serif text-lg font-bold text-leather-900 mb-2">
+                Cinto de Cuero Grueso Artesanal
+              </h3>
+              <p class="text-leather-600 text-xs line-clamp-2 mb-4">
+                Cuero de gran grosor con grabado y terminación manual. Sello de
+                autenticidad El Guasancho.
+              </p>
+            </div>
+          </div>
+          <div
+            class="p-5 pt-0 flex items-center justify-between border-t border-leather-100 mt-auto"
+          >
+            <div>
+              <span class="text-[10px] text-leather-600 uppercase block"
+                >Precio Especial</span
+              >
+              <span class="font-serif text-xl font-bold text-leather-900"
+                >$30.000 ARS</span
+              >
+            </div>
+            <a
+              href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20comprar%20el%20Cinto%20de%20Cuero%20Grueso%20Artesanal%20a%20$30.000"
+              target="_blank"
+              class="bg-leather-900 hover:bg-gold text-white hover:text-leather-900 p-3 rounded-xl transition-colors shadow-sm"
+            >
+              <i class="ph ph-whatsapp-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Producto 6: Cinto de Mujer -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden border border-leather-300/30 group hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+        >
+          <div>
+            <div class="relative overflow-hidden aspect-square bg-leather-100">
+              <img
+                src="img/cintomujer.jpeg"
+                alt="Cinto de Mujer con Hebilla Artesanal"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-3 left-3 bg-leather-900 text-leather-100 text-xs font-bold px-3 py-1 rounded-full"
+                >Exclusivo</span
+              >
+            </div>
+            <div class="p-5">
+              <span
+                class="text-xs font-semibold text-gold uppercase tracking-wider block mb-1"
+                >Damas</span
+              >
+              <h3 class="font-serif text-lg font-bold text-leather-900 mb-2">
+                Cinto Damas con Hebilla de Diseño
+              </h3>
+              <p class="text-leather-600 text-xs line-clamp-2 mb-4">
+                Elegante cinto de cuero fino con hebilla circular grabada en
+                bronce. Un accesorio distinguido para cada ocasión.
+              </p>
+            </div>
+          </div>
+          <div
+            class="p-5 pt-0 flex items-center justify-between border-t border-leather-100 mt-auto"
+          >
+            <div>
+              <span class="text-[10px] text-leather-600 uppercase block"
+                >Precio Especial</span
+              >
+              <span class="font-serif text-xl font-bold text-leather-900"
+                >$30.000 ARS</span
+              >
+            </div>
+            <a
+              href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20comprar%20el%20Cinto%20Damas%20con%20Hebilla%20de%20Diseño%20a%20$30.000"
+              target="_blank"
+              class="bg-leather-900 hover:bg-gold text-white hover:text-leather-900 p-3 rounded-xl transition-colors shadow-sm"
+            >
+              <i class="ph ph-whatsapp-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Producto 7: Yerberas de Cuero -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden border border-leather-300/30 group hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+        >
+          <div>
+            <div class="relative overflow-hidden aspect-square bg-leather-100">
+              <img
+                src="img/yerberos.jpeg"
+                alt="Yerberas de Cuero Legítimo"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-3 left-3 bg-leather-900 text-leather-100 text-xs font-bold px-3 py-1 rounded-full"
+                >Materos</span
+              >
+            </div>
+            <div class="p-5">
+              <span
+                class="text-xs font-semibold text-gold uppercase tracking-wider block mb-1"
+                >Set Matero</span
+              >
+              <h3 class="font-serif text-lg font-bold text-leather-900 mb-2">
+                Yerbera / Portayerba de Cuero
+              </h3>
+              <p class="text-leather-600 text-xs line-clamp-2 mb-4">
+                Diseño ergonómico con cierre superior y estampa de marca. El
+                compañero perfecto para tus mates diarios.
+              </p>
+            </div>
+          </div>
+          <div
+            class="p-5 pt-0 flex items-center justify-between border-t border-leather-100 mt-auto"
+          >
+            <div>
+              <span class="text-[10px] text-leather-600 uppercase block"
+                >Precio Especial</span
+              >
+              <span class="font-serif text-xl font-bold text-leather-900"
+                >$30.000 ARS</span
+              >
+            </div>
+            <a
+              href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20quiero%20comprar%20la%20Yerbera%20/%20Portayerba%20de%20Cuero%20a%20$30.000"
+              target="_blank"
+              class="bg-leather-900 hover:bg-gold text-white hover:text-leather-900 p-3 rounded-xl transition-colors shadow-sm"
+            >
+              <i class="ph ph-whatsapp-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN QUIÉNES SOMOS -->
+    <section
+      id="nosotros"
+      class="bg-leather-900 text-leather-100 py-20 relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span
+              class="text-gold font-semibold uppercase tracking-widest text-sm block mb-2"
+              >Tradición en San Miguel de Tucumán</span
+            >
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-6">
+              Quiénes Somos &bull; El Guasancho
+            </h2>
+            <p class="text-leather-300 mb-4 leading-relaxed">
+              Somos un emprendimiento tucumano apasionado por la talabartería y
+              el trabajo artesanal en cuero. Bajo la dirección de
+              <strong class="text-white font-semibold">Marcelo Rios</strong>,
+              elaboramos cada pieza combinando técnicas tradicionales con un
+              diseño elegante y funcional.
+            </p>
+            <p class="text-leather-300 mb-8 leading-relaxed">
+              Nuestro compromiso es ofrecer artículos 100% de cuero legítimo que
+              perduren y acompañen cada momento de tu día a día con distinción y
+              nobleza.
+            </p>
+            <div class="flex items-center gap-6">
+              <div>
+                <span class="font-serif text-3xl font-bold text-gold block"
+                  >100%</span
+                >
+                <span class="text-xs text-leather-300 uppercase tracking-wider"
+                  >Cuero Legítimo</span
+                >
+              </div>
+              <div class="w-px h-12 bg-leather-800"></div>
+              <div>
+                <span class="font-serif text-3xl font-bold text-gold block"
+                  >Tucumán</span
+                >
+                <span class="text-xs text-leather-300 uppercase tracking-wider"
+                  >Envíos a todo el país</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-gold/30"
+            >
+              <img
+                src="img/logo.jpeg"
+                alt="Taller El Guasancho"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO / CTA FINAL -->
+    <section id="contacto" class="py-20 bg-leather-100">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <span
+          class="text-gold font-semibold uppercase tracking-widest text-sm block mb-2"
+          >Atención Personalizada</span
+        >
+        <h2
+          class="font-serif text-3xl sm:text-4xl font-bold text-leather-900 mb-4"
+        >
+          ¿Tenés alguna consulta o querés realizar un pedido?
+        </h2>
+        <p class="text-leather-600 mb-8 max-w-xl mx-auto">
+          Comunicate directamente con Marcelo Rios por WhatsApp. Responderemos a
+          la brevedad para coordinar tu compra y envío.
+        </p>
+
+        <!-- CTA WhatsApp Inferior (Realiza tu Pedido) -->
+        <a
+          href="https://wa.me/5493816786726?text=Hola%20Marcelo,%20estoy%20en%20la%20web%20de%20El%20Guasancho%20y%20quiero%20hacerte%20un%20pedido"
+          target="_blank"
+          class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-2xl text-lg shadow-xl transition-all hover:scale-105"
+        >
+          <i class="ph ph-whatsapp-logo text-2xl"></i>
+          <span>Realiza tu Pedido</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-leather-900 text-leather-300 py-12 border-t border-leather-800"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center"
+      >
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <img
+              src="img/logo.jpeg"
+              alt="Logo"
+              class="w-10 h-10 rounded-full object-cover border border-gold"
+            />
+            <span class="font-serif text-xl font-bold text-leather-100"
+              >EL GUASANCHO</span
+            >
+          </div>
+          <p class="text-xs text-leather-400">
+            Artículos en cuero legítimo y talabartería tradicional.
+          </p>
+        </div>
+        <div class="text-center text-xs text-leather-400 space-y-1">
+          <p>📍 San Miguel de Tucumán, Argentina</p>
+          <p>📞 Tel / WhatsApp: +54 9 3816 78-6726 (Marcelo Rios)</p>
+        </div>
+        <div class="text-right text-xs text-leather-400">
+          <p>&copy; 2026 El Guasancho. Todos los derechos reservados.</p>
+          <p class="mt-1 text-gold">Desarrollo Profesional Web</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script Menú Móvil -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
